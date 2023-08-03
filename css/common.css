@@ -1,0 +1,20 @@
+.layui-footer {
+  text-align: center;
+}
+
+.layui-logo img {
+  width: 60px;
+}
+
+.layui-nav-side li {
+  margin-bottom: 15px;
+}
+
+.layui-nav-side li a {
+  display: block;
+  width: 100%;
+}
+
+.layui-nav-side {
+  margin-top: 60px;
+}

@@ -17,7 +17,7 @@ if(isset($_SESSION['userId']))
   <link rel="stylesheet" href="./lib/layui-v2.8.12/src/css/layui.css">
   <link rel="stylesheet" href="./css/index.css">
 
-  <title>Document</title>
+  <title>登录页面</title>
 </head>
 
 <body>
@@ -73,7 +73,7 @@ if(isset($_SESSION['userId']))
         </div>
         <div class="layui-form-item">
           <input type="checkbox" name="remember" lay-skin="primary" title="记住密码">
-          <a href="#" style="float: right; margin-top: 7px;" class="forget">忘记密码？</a>
+          <a href="#" style="float: right; margin-top: 7px;" class="forget">忘记密码？</a>  
         </div>
         <div class="layui-form-item">
           <button class="layui-btn layui-btn-fluid layui-btn-radius" lay-submit lay-filter="demo-login">登录</button>
