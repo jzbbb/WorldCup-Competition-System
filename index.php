@@ -8,102 +8,72 @@ if(isset($_SESSION['userId']))
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-    <title>注册和登录</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form  action="login_check.php" method="POST" class="sign-in-form" role="form">
-            <h2 class="title">登录</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" name="account" placeholder="用户名" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password"  name="pass" placeholder="密码" />
-            </div>
-            <input type="submit" value="登 录" class="btn solid" />
-            <p class="social-text">或者通过以下平台登录</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-weixin"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-qq"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-alipay"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </form>
-          <form action="#" class="sign-up-form">
-            <h2 class="title">注册</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="用户名" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="邮箱" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="密码" />
-            </div>
-            <input type="submit" class="btn" value="注 册" />
-            <p class="social-text">或者通过以下平台注册</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-weixin"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-qq"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-alipay"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </form>
-        </div>
-      </div>
 
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <button class="btn transparent" id="sign-up-btn">
-              注册
-            </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/base.css"> 
+  <link rel="stylesheet" href="./lib/bootstrap-5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./font/iconfont1/iconfont.css">
+
+  <title>登录页面</title>
+</head>
+
+<body>
+  <!-- 弹出框 -->
+  <div class="alert info-box">
+  </div>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="login_check.php" method="POST" class="sign-in-form" role="form" autocomplete="off">
+          <h2 class="title">登录</h2>
+          <div class="input-field">
+            <i class="iconfont icon-yonghu"></i>
+            <input type="text" name="account" placeholder="用户名" />
           </div>
-          <img src="./img/足球1.svg" class="image" alt="" />
-        </div>
-        <div class="panel right-panel">
-          <div class="content">
-            <button class="btn transparent" id="sign-in-btn">
-              登 录
-            </button>
+          <div class="input-field">
+            <i class="iconfont icon-mima"></i>
+            <input type="password" name="pass" placeholder="密码" />
           </div>
-          <img src="./img/足球.svg" class="image" alt="" />
-        </div>
+          <div class="index-button">
+            <input type="submit" value="登 录" class="btn solid" id="login-btn" />
+            <input type="reset" value="重 置" class="solid reset" id="reset-btn" />
+          </div>
+
+          <p class="social-text">或者通过以下平台登录</p>
+          <div class="social-media">
+            <a href="#" class="social-icon" id="github">
+              <i class="iconfont icon-github"></i>
+            </a>
+            <a href="#" class="social-icon" id="qq">
+              <i class="iconfont icon-QQ"></i>
+            </a>
+            <a href="#" class="social-icon" id="zhifubao">
+              <i class="iconfont icon-zhifubao"></i>
+            </a>
+            <a href="#" class="social-icon" id="weixin">
+              <i class="iconfont icon-weixin"></i>
+            </a>
+          </div>
+        </form>
       </div>
     </div>
 
-    <script src="app.js"></script>
-  </body>
+    <div class="panels-container">
+      <div class="panel">
+        <img src="./img/football.svg" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/index.js"></script>
+  <script src="./utils/alert.js"></script>
+  <script src="./lib/bootstrap-5.3.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
 </html>
+

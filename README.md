@@ -1,2 +1,3 @@
 # WorldCup-Competiton-System
-基于HTTP+CSS+JS+PHP+Mysql的世界杯比赛系统
+
+基于 HTTP+CSS+JS+PHP+Mysql 的世界杯比赛系统
