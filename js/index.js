@@ -1,19 +1,19 @@
-const loginBtn = document.querySelector('#login-btn')
-const form = document.querySelector('.sign-in-form')
+const loginBtn = document.querySelector('[lay-submit]')
+const form = document.querySelector('.layui-form')
 
 loginBtn.addEventListener('click', function (e) {
   e.preventDefault()
-  const account = document.querySelector('[name="account"]').value
-  const pass = document.querySelector('[name="pass"]').value
-  if (pass.length == 0 || account.length == 0) {
+  const username = document.querySelector('[name="username"]').value
+  const password = document.querySelector('[name="password"]').value
+  if (password.length == 0 || username.length == 0) {
     myAlert(false, '请输入账号或密码')
   }
   else {
     axios.post(
       "../login_check.php",
       {
-        account,
-        pass
+        username,
+        password
       },
       {
         headers: {
